@@ -1,0 +1,40 @@
+.mid{
+	height:200px;
+	width:400px;
+	background-color:#CCC;
+	position:absolute; /*绝对定位的参考系是离自己最近的非静态定位的父级元素或祖籍元素*/
+	top:50%;/*移动是参考父级元素*/
+	left:50%;
+	margin-top:-100px; 
+	margin-left:-200px;
+	overflow:hidden;/*隐藏其他多余的圆角*/
+	
+	/*top:0;  
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	这个方法是把margin设为auto,正常情况margin是0。
+	当绝对定位时,为了满足l,r,b,t都为0，margin被拉伸而且上下左右相等所以居中。
+	当l=0被取消时，container直接位置右移就能满足r=0,并不需要拉伸margin,所以左右margin默认为0。*/
+}
+
+.left{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+	background-color:#fc0;
+	position:absolute;
+	top:-50px;
+	left:-50px;
+}
+
+.right{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+	background-color:#fc0;
+	position:absolute;
+	bottom:-50px;
+	right:-50px;
+}
