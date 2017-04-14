@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.flex{
+	/*flex布局*/
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	flex-direction: row;
+	/*基本设置*/
+	width: 350px;
+	height: 100px;
+	margin: 0 auto;
+}
+input:first-child{
+	width: 100px;
+}
+#bottom p{
+	/*基本设置*/
+	margin-right: 5px;
+	width: 40px;
+	height: 40px;
+	background: red;
+	display: inline-block;
+	cursor: pointer;
+	/*文本设置*/
+	color: #ffffff;
+	font-size: 22px;
+	font-family: "黑体";
+	line-height: 40px;
+	text-align: center;
+	overflow: hidden;
+}
