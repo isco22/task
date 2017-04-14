@@ -1,14 +1,3 @@
-
-function pOnclick(target){
-	alert(target.innerHTML);
-}
-var show=document.getElementById("bottom");
-show.addEventListener("click",function(event){
-	alert(1);
-	if(event.target.nodeName.toLoverCase()==='p')
-		pOnclick.call(null,event.target);
-},false);
-
 function get(p){
 	var num=document.getElementById('num'); //获取输入框的节点
 	var num_list=document.getElementById('bottom'); //获取输出节点
@@ -20,12 +9,17 @@ function get(p){
 			var add_p=document.createElement("p");//创造一个P节点
 			add_p.innerHTML=num.value;
 			num_list.appendChild(add_p);//在父节点下插入一个子节点
+			add_p.addEventListener('click',function(){
+				num_list.removeChild(this);
+			})
 		}
 		else{
 			var add_p=document.createElement("p");
 			add_p.innerHTML=num.value;
 			num_list.insertBefore(add_p,num_list.firstChild);//在父节点下的第一个子节点前插入新节点
-
+			add_p.addEventListener('click',function(){
+				num_list.removeChild(this);
+			})
 		}
 	}
 	else{	
